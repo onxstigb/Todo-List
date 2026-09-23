@@ -1,56 +1,154 @@
-# Welcome to your Expo app 👋
+# Todo-List App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a simple mobile to-do list built with Expo and React Native. The app allows a user to type a task into an input field, add it to a list, and delete tasks when they are complete. It demonstrates core React concepts such as `useState`, dynamic list rendering with `FlatList`, and a clean mobile card layout.
 
-## Get started
+## Project Purpose
 
-1. Install dependencies
+This app was created for Homework 3 in N322. The goal was to build a to-do list application that:
 
-   ```bash
-   npm install
-   ```
+- stores tasks in state
+- renders tasks dynamically
+- adds new tasks from user input
+- removes tasks with a delete button
+- presents the UI in a clean, mobile-friendly layout
 
-2. Start the app
+## Features
 
-   ```bash
-   npx expo start
-   ```
+- Text input for entering a new task
+- Add Item button to insert a task into the list
+- Dynamic list rendering using `FlatList`
+- Delete button/icon for each task item
+- Mobile-first card layout for readability and clean styling
+- Expo-based development workflow for Android, iOS, and web testing
 
-In the output, you'll find options to open the app in a
+## App Behavior
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Open the app on a device or emulator.
+2. Enter a task in the input field.
+3. Press the Add Item button.
+4. The new task appears in the list below.
+5. Press the trash icon next to any item to remove it.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Technologies Used
 
-## Get a fresh project
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- `@expo/vector-icons`
 
-When you're ready, run:
+## Project Structure
 
-```bash
-npm run reset-project
+```text
+Todo-List/
+├── app.json
+├── package.json
+├── README.md
+├── src/
+│   ├── app/
+│   │   ├── _layout.tsx
+│   │   ├── index.tsx
+│   │   └── explore.tsx
+│   ├── components/
+│   ├── constants/
+│   └── hooks/
+├── assets/
+├── scripts/
+└── tsconfig.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Installation
 
-### Other setup steps
+Before you run the app, make sure you have the following installed:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- Node.js (LTS version recommended)
+- npm
+- Expo CLI via the project dependencies or `npx expo`
+- A mobile device with the Expo Go app, or an Android/iOS emulator
 
-## Learn more
+### 1. Clone the repository
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+git clone <your-github-repo-url>
+cd Todo-List
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2. Install dependencies
 
-## Join the community
+```bash
+npm install
+```
 
-Join our community of developers creating universal apps.
+If the project is missing any Expo package after setup, install it as needed:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo install @expo/vector-icons
+```
+
+## How to Run the App
+
+### Option 1: Run on your phone with Expo Go
+
+1. Start the Expo development server:
+
+```bash
+npx expo start
+```
+
+2. Install the Expo Go app from the App Store or Google Play.
+3. Scan the QR code shown in the terminal with your phone camera.
+4. The app should open in Expo Go and run on your device.
+
+### Option 2: Run on an emulator
+
+```bash
+npx expo start --android
+```
+
+or
+
+```bash
+npx expo start --ios
+```
+
+### Option 3: Run in a web browser
+
+```bash
+npx expo start --web
+```
+
+## Assignment Alignment
+
+This app satisfies the homework requirements by including:
+
+- `useState` to manage task data
+- an input field for adding tasks
+- a button to add tasks
+- a `FlatList` to display them dynamically
+- a delete function for each item
+- clean card-based styling for each task
+
+## Screenshot
+
+Add a screenshot of the app running in Expo Go here:
+
+```text
+[Insert screenshot of the app here]
+```
+
+## GitHub Submission
+
+To submit the project:
+
+1. Create a public GitHub repository.
+2. Upload this project to the repo.
+3. Copy the repository link.
+4. Submit the GitHub URL and one screenshot of the app running in Expo Go.
+
+## Notes
+
+This project is intentionally simple and beginner-friendly. It focuses on learning state management and list rendering in a real mobile application. The app is a good foundation for future enhancements such as task completion toggles, local storage, or editing tasks.
+
+## License
+
+This project is for educational use as part of the N322 assignment.
