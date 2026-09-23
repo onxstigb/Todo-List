@@ -37,12 +37,12 @@ export default function HomeScreen() {
         <Text style={styles.title}>To-Do List</Text>
         <TextInput
           style={styles.input}
-          placeholder="Add an item..."
+          placeholder="Add a task..."
           value={item}
           onChangeText={setItem}
         />
         <Pressable style={styles.button} onPress={addItem}>
-          <Text style={styles.buttonText}>Add Item</Text>
+          <Text style={styles.buttonText}>Add Task</Text>
         </Pressable>
         <FlatList
           style={styles.listContainer}
